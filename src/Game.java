@@ -36,7 +36,7 @@ public class Game extends JPanel implements Runnable, MouseListener {
         g2d.drawString("Coins: " + coinCount, 20, 30);
 
         // Draw coin icon
-        g2d.drawImage(coinIcon.getImage(), getWidth() / 2 - 25, getHeight() / 2 - 25, 50, 50, this);
+        g2d.drawImage(coinIcon.getImage(), getWidth() / 2 - 25, getHeight() / 2 - 25, 100, 100, this);
     }
 
     public void mouseClicked(MouseEvent e) {
@@ -61,7 +61,7 @@ public class Game extends JPanel implements Runnable, MouseListener {
         JFrame frame = new JFrame("Coin Clicker Game");
         Game game = new Game();
         frame.add(game);
-        frame.setSize(400, 400);
+        frame.setSize(700, 700);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
     }
