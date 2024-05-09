@@ -7,12 +7,15 @@ public class Game extends JPanel implements Runnable, MouseListener {
     private ImageIcon coinIcon;
     private Sound music;
     private ImageIcon background;
+    private ImageIcon background2;
+
     private int GS;
-    
+    private ImageIcon SLOT;
     public Game() {
         background = new ImageIcon("Table.jpg");
     	coinCount = 0;
         coinIcon = new ImageIcon("chipp.png"); 
+        background2 = new ImageIcon("SLOT.jpg");
         GS=0;
         new Thread(this).start();
         this.setFocusable(true);
@@ -36,6 +39,8 @@ public class Game extends JPanel implements Runnable, MouseListener {
     	
     	case 1:
     		g2d.clearRect(0, 0, getSize().width, getSize().height); 
+    		g2d.drawImage(background2.getImage(), 0, 0, getWidth(), getHeight(), this);
+
     		
     		break;
     	}
